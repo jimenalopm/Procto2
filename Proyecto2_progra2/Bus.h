@@ -10,7 +10,7 @@ protected:
     string placa;
     int capacidadMaxima;
     int pasajerosActuales;
-
+    static double porcentajeAforo;
 
 public:
     Bus();
@@ -21,10 +21,13 @@ public:
     int getCapacidadMaxima() const;
     int getPasajerosActuales() const;
     int getCapacidadDisponible() const;
-
-    bool agregarPasajeros(int cantidad); //Pure virtual function
-    virtual string getTipo() const = 0;  // Pure virtual function
+    
+    virtual bool agregarPasajero(int cantidad) = 0; //Pure virtual function
     string toString() override;
-};
+
+static double getPorcentajeAforo();
+static void setPorcentajeAforo(double porcentaje);
+
+}; 
 
 #endif

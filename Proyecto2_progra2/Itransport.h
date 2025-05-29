@@ -11,6 +11,7 @@ public:
 //virtual methods
 
 virtual string toString()=0;
+virtual string getTipo() const = 0;
 
 };
 

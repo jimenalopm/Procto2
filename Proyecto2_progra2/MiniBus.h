@@ -6,7 +6,10 @@
 class Minibus : public Bus {
 public:
     Minibus(const string& placa);
-    string getTipo() const override;
+
+
+    string getTipo()  const  override;
+    bool agregarPasajero(int cantidad) override;  // 
 };
 
 #endif

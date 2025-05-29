@@ -7,6 +7,7 @@ class Coaster : public Bus {
 public:
     Coaster(const string& placa);
     string getTipo() const override;
+    bool agregarPasajero(int cantidad) override;
 };
 
 #endif
