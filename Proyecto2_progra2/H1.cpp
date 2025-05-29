@@ -5,3 +5,6 @@
 H1::H1(const string& placa) : Bus(placa, 6) {}
 
 string H1::getTipo() const { return "H1"; }
+string H1::toString() {
+    return Bus.toString();
+}
