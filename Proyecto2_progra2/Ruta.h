@@ -5,7 +5,14 @@
 
 class Ruta :public Bus 
 {
+
+private:
+string nombreRuta;
+
+
+
 public:
+    Ruta();
     Ruta(const string& nombreRuta);
     ~Ruta();
     void agregarBus();
@@ -13,8 +20,6 @@ public:
     string toString() override;
 
 
-private:
-string nombreRuta;
     
 };
 

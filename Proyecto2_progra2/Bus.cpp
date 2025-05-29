@@ -1,6 +1,6 @@
 #include "Bus.h"
 
-
+Bus::Bus() : placa(""), capacidadMaxima(0), pasajerosActuales(0) {} 
 
 
 Bus::Bus(const string& placa, int capacidad) 

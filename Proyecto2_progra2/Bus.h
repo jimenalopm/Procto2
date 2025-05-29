@@ -11,7 +11,9 @@ protected:
     int capacidadMaxima;
     int pasajerosActuales;
 
+
 public:
+    Bus();
     Bus(const string& placa, int capacidad);
     virtual ~Bus() {}
 

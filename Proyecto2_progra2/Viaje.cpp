@@ -1,4 +1,6 @@
 #include "Viaje.h"
+
+
 Viaje::Viaje(){
 
 }
