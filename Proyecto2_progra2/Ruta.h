@@ -9,8 +9,6 @@ class Ruta :public Bus
 private:
 string nombreRuta;
 
-
-
 public:
     Ruta();
     Ruta(const string& nombreRuta);
