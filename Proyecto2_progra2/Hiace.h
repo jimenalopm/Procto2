@@ -6,9 +6,7 @@
 class Hiace : public Bus {
 public:
     Hiace(const string& placa);
-    string getTipo() const override;  // 
-    bool agregarPasajero(int cantidad);
-    string toString() override;
+    string toString() const override;
 };
 
 #endif

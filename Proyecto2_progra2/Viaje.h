@@ -4,7 +4,7 @@
 
 
 
-
+// 
 class Viaje:public Itransport,public Ruta{
     public:
     Viaje();

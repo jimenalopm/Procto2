@@ -30,7 +30,7 @@ public:
     ~Vector();
     
 
-    //Metodo para agregar  un bus al final
+    //Metodo para agregar  un objecto al final
     void agregar(T* dato);
 
     // agregar un bus en una posicion especifica 
@@ -44,7 +44,6 @@ public:
     bool estaVacio() ;
     void vaciar() ;
     void mostrarTodos();
-
 
 
 };

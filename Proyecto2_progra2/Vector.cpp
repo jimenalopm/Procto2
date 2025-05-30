@@ -4,7 +4,7 @@
 #include "Ticket.h"
 
 template<typename T>
-void Vector<T>::redimensionar(int capacidad){
+void Vector<T>::redimensionar(int nuevacapacidad){
     T* nuevoArreglo = new T[nuevaCapacidad];
     int elementosACopiar = (nuevaCapacidad < tamanno) ? nuevaCapacidad : tamanno;
 
@@ -14,7 +14,7 @@ void Vector<T>::redimensionar(int capacidad){
 
     delete[] elementos;
     elementos = nuevoArreglo;
-    capacidad = nuevaCapacidad;
+    this->capacidad = nuevaCapacidad;
 
     if (tamanno > capacidad) {
         tamanno = capacidad;
@@ -61,7 +61,7 @@ Vector<T>::~Vector()
 
 
 template<typename T>
-void Vector<T>::agregar(T * T) {
+void Vector<T>::agregar(T * dato) {
 // M�todo para agregar un bus al final
 	// Si no hay espacio suficiente, redimensionar
 	if (tamanno >= capacidad) {
@@ -70,7 +70,7 @@ void Vector<T>::agregar(T * T) {
 	}
 
 	// 
-	elementos[tamanno++] = *T;  // o elemento
+	elementos[tamanno++] = *dato;  // o elemento
 }
 
 
@@ -94,7 +94,7 @@ void Vector<T>::insertar(int posicion, T * dato)
 		elementos[i] = elementos[i - 1];
 	}
 
-	// Insertar el bus
+	// Insertar el objecto
 	elementos[posicion] = *dato;
 	tamanno++;
 }

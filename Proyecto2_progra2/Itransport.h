@@ -10,9 +10,8 @@ class Itransport
 public:
 //virtual methods
 
-virtual string toString()=0;
-virtual string getTipo() const = 0;
-
+virtual string toString()const =0;
+virtual ~Itransport() = default;
 };
 
 #endif

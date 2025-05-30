@@ -5,10 +5,8 @@
 
 class H1 : public Bus {
 public:
-   Hl(const string& placa);
-    string getTipo() const override;  // 
-    bool agregarPasajero(int cantidad);
-    string toString() override;
+   H1(const string& placa);
+    string toString() const override;
 };
 
 #endif

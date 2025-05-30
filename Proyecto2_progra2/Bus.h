@@ -1,7 +1,7 @@
 #ifndef BUS_H
 #define BUS_H
 #include "Itransport.h"
-
+#include<fstream>
 #include <string>
 
 class Bus : public Itransport {
@@ -10,23 +10,24 @@ protected:
     string placa;
     int capacidadMaxima;
     int pasajerosActuales;
-    static double porcentajeAforo;
+    
 
 public:
-    Bus();
     Bus(const string& placa, int capacidad);
-    virtual ~Bus() {}
-
+    
+    // Getters
     string getPlaca() const;
     int getCapacidadMaxima() const;
     int getPasajerosActuales() const;
     int getCapacidadDisponible() const;
     
-    virtual bool agregarPasajero(int cantidad) = 0; //Pure virtual function
-    string toString() override;
+    // Métodos
+    bool agregarPasajeros(int cantidad);
+    string toString() const override;
+    
+    // Método para mostrar información (usado en Vector::mostrarTodos)
+    void mostrarInfo() const;
 
-static double getPorcentajeAforo();
-static void setPorcentajeAforo(double porcentaje);
 
 }; 
 

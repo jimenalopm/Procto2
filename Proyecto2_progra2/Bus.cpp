@@ -1,40 +1,32 @@
 #include "Bus.h"
 
 
-double Bus::porcentajeAforo = 0.8; // 80% por defecto
 
-
-Bus::Bus() : placa(""), capacidadMaxima(0), pasajerosActuales(0) {} 
-
-
-Bus::Bus(const string& placa, int capacidad) 
-    : placa(placa), capacidadMaxima(capacidad), pasajerosActuales(0) {}
+Bus::Bus(const string& placa, int capacidadMaxima) 
+    : placa(placa), capacidadMaxima(capacidadMaxima), pasajerosActuales(0) {}
 
 string Bus::getPlaca() const { return placa; }
-
 int Bus::getCapacidadMaxima() const { return capacidadMaxima; }
-
 int Bus::getPasajerosActuales() const { return pasajerosActuales; }
-
 int Bus::getCapacidadDisponible() const { 
-    return (capacidadMaxima * 0.8) - pasajerosActuales;    // 80% of capacity
+    return capacidadMaxima - pasajerosActuales; 
 }
 
-double Bus::getPorcentajeAforo() {
-    return porcentajeAforo;
-}
-
-void Bus::setPorcentajeAforo(double porcentaje) {
-    if (porcentaje <= 0 || porcentaje > 1.0) {
-        throw std::invalid_argument("Porcentaje de aforo debe estar entre 0 y 1");
+bool Bus::agregarPasajeros(int cantidad) {
+    if (pasajerosActuales + cantidad <= capacidadMaxima) {
+        pasajerosActuales += cantidad;
+        return true;
     }
-    porcentajeAforo = porcentaje;
+    return false;
 }
 
-
-string Bus::toString() {
-    return "Placa: " + placa + ", Tipo: " + getTipo() + 
-           ", Capacidad: " + to_string(capacidadMaxima) + 
-           ", Ocupación: " + to_string(pasajerosActuales) + 
-           "/" + to_string(static_cast<int>(capacidadMaxima * 0.8));
+string Bus::toString() const {
+    return "Bus Placa: " + placa + 
+           ", Capacidad: " + std::to_string(capacidadMaxima) +
+           ", Pasajeros: " + std::to_string(pasajerosActuales);
 }
+
+void Bus::mostrarInfo() const {
+    cout << toString() << endl;
+}
+
