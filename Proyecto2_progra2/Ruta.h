@@ -5,8 +5,6 @@
 #include "Itransport.h"
 #include <string>
 #include<iostream>
-#include<fstream>
-#pragma once
 
 
 class Ruta :public Itransport
@@ -15,7 +13,7 @@ class Ruta :public Itransport
 private:
 string nombreRuta;
 Vector<Bus>buses;
-
+Vector<string> destinos;
 
 public:
     Ruta();
@@ -25,21 +23,21 @@ public:
      //
      Vector<Bus> getBuses();
      void setBuses(const Vector<Bus>buses);
-    
+     Vector<string> getDestinos() const;
 
 
     string getNombreRuta() const;
 
 
-    int getTotalCapacidad() const; 
+    /*int getTotalCapacidad() const; 
     int getTotalPasajeros() const;
-    int CapacidadDisponible() const;
+    int CapacidadDisponible() const;*/
 
     //metodos
     void asignarBus(Bus* bus);
-    bool reservaEspacio(int cantidadPasajeros, string& placaBusAsignado);
+    /*bool reservaEspacio(int cantidadPasajeros, string& placaBusAsignado);*/
     string toString() override;
-     void mostarInfo();
+    void cargarDestinos();
 
 
     

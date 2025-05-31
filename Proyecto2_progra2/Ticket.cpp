@@ -19,7 +19,7 @@ string Ticket::getPlacaBus() const { return placaBus; }
 
 int Ticket::getCantidadPasajeros() const { return cantidadPasajeros; }
 
-string Ticket::toString() const {
+string Ticket::toString() {
     return "Ticket #" + to_string(numeroTicket) + 
            ", Cédula: " + cedulaPasajero +
            ", Ruta: " + ruta + 
@@ -27,6 +27,6 @@ string Ticket::toString() const {
            ", Pasajeros: " + to_string(cantidadPasajeros);
 }
 
-void Ticket::mostrarInfo() const {
+void Ticket::mostrarInfo() {
     cout << toString() << endl;
 }

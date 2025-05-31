@@ -19,6 +19,6 @@ class Ticket:public Itransport
     string getPlacaBus() const;
     int getCantidadPasajeros() const;
     
-    string toString() const override;
-    void mostrarInfo() const;
+    string toString() override;
+    void mostrarInfo();
 };
