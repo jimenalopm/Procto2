@@ -38,7 +38,7 @@ public:
     //metodos
     void asignarBus(Bus* bus);
     bool reservaEspacio(int cantidadPasajeros, string& placaBusAsignado);
-    string toString() const override;
+    string toString() override;
      void mostarInfo();
 
 

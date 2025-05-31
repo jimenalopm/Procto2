@@ -5,6 +5,6 @@
 Minibus::Minibus(const string& placa) : Bus(placa, 40) {}
 
 
-string Minibus::toString() const {
+string Minibus::toString() {
     return "MiniBus" + Bus::toString();
 }

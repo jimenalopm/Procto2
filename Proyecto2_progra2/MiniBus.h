@@ -6,7 +6,7 @@
 class Minibus : public Bus {
 public:
     Minibus(const string& placa);
-    string toString() const override;
+    string toString() override;
  
 };
 

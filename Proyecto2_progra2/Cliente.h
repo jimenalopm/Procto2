@@ -12,5 +12,6 @@ class Cliente{
     Cliente();
     Cliente(string nombreCliente, string idCliente);
     ~Cliente();
+    void mostrarInfo();
 
 };
