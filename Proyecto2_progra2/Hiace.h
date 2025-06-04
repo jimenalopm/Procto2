@@ -5,8 +5,9 @@
 
 class Hiace : public Bus {
 public:
-    Hiace(const string& placa);
+    Hiace(const string& placa, int capacidadMaxima);
     string toString() override;
+     string getTipo() const override { return "Hiace"; }
 };
 
 #endif

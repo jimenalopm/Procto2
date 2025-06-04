@@ -2,7 +2,7 @@
 
 
 
-H1::H1(const string& placa) : Bus(placa, 6) {}
+H1::H1(const string& placa, int capacidadMaxima) : Bus(placa, 6) {}
 
 
 string H1::toString() {

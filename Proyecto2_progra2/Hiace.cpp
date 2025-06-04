@@ -2,7 +2,7 @@
 
 
 
-Hiace::Hiace(const string& placa) : Bus(placa, 12) {}
+Hiace::Hiace(const string& placa, int capacidadMaxima) : Bus(placa, 12) {}
 
 
 string Hiace::toString() {

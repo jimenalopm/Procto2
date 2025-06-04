@@ -1,12 +1,43 @@
 #include "Viaje.h"
 
 
-Viaje::Viaje(){
-
+Viaje::Viaje(Ruta* ruta, string& fecha, string& horaDeSalida)
+    : rutaAsignada(ruta), fecha(fecha), horaDeSalida(horaDeSalida) {
+    // Constructor implementation
 }
 Viaje::~Viaje(){
 
 }
-void Viaje::AgregarViaje(){
-    
+
+void Viaje::asignarBus(Bus* bus){
+   busesAsignados.agregar(&bus);
+}
+bool Viaje::eliminarBus(const string& placaBus) {
+    for (int i = 0; i < busesAsignados.getTamanno(); i++) {
+        Bus* bus = *busesAsignados.obtener(i);
+        if (bus->getPlaca() == placaBus) {
+            busesAsignados.eliminar(i);
+            return true; // Bus eliminado exitosamente
+        }
+    }
+    return false; // No se encontró el bus con la placa especificada
+}
+Ruta* Viaje::getRutaAsignada() {
+    return rutaAsignada;
+}
+Vector<Bus*>& Viaje::getBusesAsignados() {
+    return busesAsignados;
+}
+string Viaje::getFecha() {
+    return fecha;
+}
+string Viaje::getHoraDeSalida() {
+    return horaDeSalida;
+}
+string Viaje::toString() {
+    return "Viaje a la ruta: " + rutaAsignada->getNombreRuta() +
+           ", Fecha: " + fecha +
+           ", Hora de salida: " + horaDeSalida +
+              ", Buses asignados: " + to_string(busesAsignados.getTamanno());
+              
 }

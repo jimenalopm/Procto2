@@ -12,7 +12,7 @@ class Ruta :public Itransport
 
 private:
 string nombreRuta;
-Vector<Bus>buses;
+Vector<Bus*> buses;
 Vector<string> destinos;
 
 public:
@@ -21,8 +21,8 @@ public:
     ~Ruta();
 
      //
-     Vector<Bus> getBuses();
-     void setBuses(const Vector<Bus>buses);
+     Vector<Bus*> getBuses();
+     void setBuses(const Vector<Bus*>buses);
      Vector<string> getDestinos() const;
 
 
@@ -34,8 +34,8 @@ public:
     int CapacidadDisponible() const;*/
 
     //metodos
-    void asignarBus(Bus* bus);
-    /*bool reservaEspacio(int cantidadPasajeros, string& placaBusAsignado);*/
+    /*void asignarBus(Bus* bus);
+    bool reservaEspacio(int cantidadPasajeros, string& placaBusAsignado);*/
     string toString() override;
     void cargarDestinos();
 

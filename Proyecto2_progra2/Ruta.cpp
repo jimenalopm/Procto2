@@ -9,10 +9,10 @@ Ruta::Ruta(const string& nombreRuta) : nombreRuta(nombreRuta) {
 Ruta::~Ruta() {
     // Destructor 
 }
-Vector<Bus> Ruta::getBuses() {
+Vector<Bus*> Ruta::getBuses() {
     return buses;
 }
-void Ruta::setBuses(const Vector<Bus> buses) {
+void Ruta::setBuses(const Vector<Bus*> buses) {
     this->buses = buses;
 }
 Vector<string> Ruta::getDestinos() const {
@@ -21,9 +21,9 @@ Vector<string> Ruta::getDestinos() const {
 string Ruta::getNombreRuta() const {
     return nombreRuta;
 }
-void Ruta::asignarBus(Bus* bus){
+/*void Ruta::asignarBus(Bus* bus){
     buses.agregar(bus);
-}
+}*/
 /*bool Ruta::reservaEspacio(int cantidadPasajeros, string& placaBusAsignado) {
     for (int i = 0; i < buses.getTamanno(); i++) {
         Bus& bus = buses.obtener(i);

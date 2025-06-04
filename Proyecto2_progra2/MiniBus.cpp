@@ -1,10 +1,9 @@
-#include "MiniBus.h"
+#include "Minibus.h"
+#include <string>
 
+Minibus::Minibus(const std::string& placa, int capacidadMaxima) 
+    : Bus(placa, capacidadMaxima) {}  // Usa el parámetro capacidadMaxima
 
-
-Minibus::Minibus(const string& placa) : Bus(placa, 40) {}
-
-
-string Minibus::toString() {
-    return "MiniBus" + Bus::toString();
+std::string Minibus::toString() {
+    return "Minibus " + Bus::toString();  // Nombre consistente
 }

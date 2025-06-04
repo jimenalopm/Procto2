@@ -5,8 +5,9 @@
 
 class H1 : public Bus {
 public:
-   H1(const string& placa);
+   H1(const string& placa, int capacidadMaxima);
     string toString() override;
+     string getTipo() const override { return "H1"; }
 };
 
 #endif

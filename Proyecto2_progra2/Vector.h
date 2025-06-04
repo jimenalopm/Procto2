@@ -5,12 +5,10 @@
 
 #pragma once
 template <typename T>
-
-
 class Vector
 {
 private:
-    T* elementos;
+    T** elementos;
     int tamanno;
     int capacidad;
 
@@ -29,7 +27,6 @@ public:
     //destrcutor 
     ~Vector();
     
-
     //Metodo para agregar  un objecto al final
     void agregar(T* dato);
 
@@ -38,7 +35,7 @@ public:
 
     void eliminar(int posicion);
 
-    T obtener(int posicion) ;
+    T* obtener(int posicion) ;
     int getTamanno() ;
     int getCapacidad() ;
     bool estaVacio() ;

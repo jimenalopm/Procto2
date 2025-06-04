@@ -1,13 +1,14 @@
-#ifndef BUSETA_H
-#define BUSETA_H
+#ifndef MINIBUS_H
+#define MINIBUS_H
 
 #include "Bus.h"
+#include <string>
 
 class Minibus : public Bus {
 public:
-    Minibus(const string& placa);
-    string toString() override;
- 
+    Minibus(const string& placa, int capacidadMaxima);
+     string toString() override;
+    string getTipo() const override { return "Minibus"; }
 };
 
-#endif
+#endif // MINIBUS_H

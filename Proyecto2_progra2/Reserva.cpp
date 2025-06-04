@@ -1,12 +1,13 @@
 #include "Reserva.h"
 
 
-Reserva::Reserva(){
+Reserva::Reserva() : viaje(nullptr) {
+    viaje= new Ruta();
 
 }
 Reserva::~Reserva(){
 
 }
-void Reserva::Reservar(){
+void Reserva::Reservar(int cantidadPasajeros, string& placaBusAsignado){
     
 }
