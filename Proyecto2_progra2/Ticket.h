@@ -1,24 +1,21 @@
-#include "Itransport.h"
 
-class Ticket:public Itransport
+#include "Reserva.h"
+
+class Ticket:public Reserva
   {
-    private: 
-    static int contadorTickets;
-    int numeroTicket; 
-    string cedulaPasajero;
-    string ruta;
-    string placaBus;
-    int cantidadPasajeros;
-    public:
-     Ticket(const string& cedula, const string& ruta, const string& placaBus, int cantidadPasajeros);
     
+    public:
+     Ticket(Viaje* viaje, Bus* bus, string pasajero, string cedula, int asiento);
+    
+
+      string obtenerInfo() override;
+      void imprimir();
     // Getters
-    int getNumeroTicket() const;
+    /*int getNumeroTicket() const;
     string getCedulaPasajero() const;
     string getRuta() const;
     string getPlacaBus() const;
-    int getCantidadPasajeros() const;
+    int getCantidadPasajeros() const;*/
     
-    string toString() override;
-    void mostrarInfo();
+    
 };

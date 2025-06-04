@@ -6,7 +6,7 @@
 
 
 // 
-class Viaje:public Itransport,public Ruta{
+class Viaje:public Itransport{
     public:
     Viaje(Ruta* ruta, string& fecha, string& horaDeSalida)
         : rutaAsignada(ruta), fecha(fecha), horaDeSalida(horaDeSalida) {};

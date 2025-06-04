@@ -7,7 +7,7 @@
 #include<fstream>
 FlotaBuses::FlotaBuses()
 {
-    //cargarBuses();
+    cargarDatoiniciales();
 }
 
 FlotaBuses::~FlotaBuses()

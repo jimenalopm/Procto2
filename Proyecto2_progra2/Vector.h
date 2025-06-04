@@ -8,7 +8,7 @@ template <typename T>
 class Vector
 {
 private:
-    T** elementos;
+    T* elementos;
     int tamanno;
     int capacidad;
 
@@ -35,7 +35,7 @@ public:
 
     void eliminar(int posicion);
 
-    T* obtener(int posicion) ;
+    T obtener(int posicion) ;
     int getTamanno() ;
     int getCapacidad() ;
     bool estaVacio() ;

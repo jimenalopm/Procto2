@@ -5,8 +5,13 @@ Viaje::Viaje(Ruta* ruta, string& fecha, string& horaDeSalida)
     : rutaAsignada(ruta), fecha(fecha), horaDeSalida(horaDeSalida) {
     // Constructor implementation
 }
-Viaje::~Viaje(){
+Viaje::Viaje(){
 
+}
+Viaje::~Viaje(){
+    for (int i = 0; i < busesAsignados.getTamanno(); i++) {
+        delete busesAsignados.obtener(i);
+    }
 }
 
 void Viaje::asignarBus(Bus* bus){
@@ -14,7 +19,7 @@ void Viaje::asignarBus(Bus* bus){
 }
 bool Viaje::eliminarBus(const string& placaBus) {
     for (int i = 0; i < busesAsignados.getTamanno(); i++) {
-        Bus* bus = *busesAsignados.obtener(i);
+        Bus* bus = busesAsignados.obtener(i);
         if (bus->getPlaca() == placaBus) {
             busesAsignados.eliminar(i);
             return true; // Bus eliminado exitosamente
@@ -39,5 +44,5 @@ string Viaje::toString() {
            ", Fecha: " + fecha +
            ", Hora de salida: " + horaDeSalida +
               ", Buses asignados: " + to_string(busesAsignados.getTamanno());
-              
+
 }

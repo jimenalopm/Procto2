@@ -2,7 +2,8 @@
 #define FLOTABUSES_H
 #include "Vector.h"
 #include "Bus.h"
-#include <string>
+#include "Ticket.h"
+#include <string> 
 #pragma once
 
 class FlotaBuses
@@ -12,18 +13,19 @@ public:
     ~FlotaBuses();
 
     void cargarDatoiniciales();
-
-    Vector<Bus> getFlota();
-    void mostrarFlota();
-
-    //gestion de buses
-    void agregarBus(Bus* bus);
-    Bus* buscarBus(const std::string& placa);
-    void mostrarFlota();
+    void agregarTicket(Ticket* t){
+        tickets.agregar(&t);
+    };
+    void generarReporteTickets(){
+        cout<<"Reporte de Tickets Generados: "<<endl;
+        for(int i=0; i<tickets.getTamanno(); i++){
+            tickets.obtener(i)->imprimir();
+        }
+    }
     
 private:
     Vector<Bus> buses;
-    
+    Vector<Ticket*> tickets;
 };
 
 #endif

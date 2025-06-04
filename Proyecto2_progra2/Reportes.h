@@ -1,6 +1,9 @@
 
 
 #include <iostream>
+#include "Vector.h"
+#include "FlotaBuses.h"
+#include "Ticket.h"
 using namespace std;
 
 

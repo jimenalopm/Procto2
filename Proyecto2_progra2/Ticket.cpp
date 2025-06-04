@@ -2,31 +2,25 @@
 
 
 
-int Ticket::contadorTickets = 0;
+#include <iostream>
+#include <string>
 
-Ticket::Ticket(const string& cedula, const string& ruta, const string& placaBus, int cantidadPasajeros)
-    : cedulaPasajero(cedula), ruta(ruta), placaBus(placaBus), cantidadPasajeros(cantidadPasajeros) {
-    numeroTicket = ++contadorTickets;
+Ticket::Ticket(Viaje* viaje, Bus* bus, string pasajero, string cedula, int asiento)
+    : Reserva(viaje, bus, pasajero, cedula, asiento) {
+      
+
+    
 }
 
-int Ticket::getNumeroTicket() const { return numeroTicket; }
-
-string Ticket::getCedulaPasajero() const { return cedulaPasajero; }
-
-string Ticket::getRuta() const { return ruta; }
-
-string Ticket::getPlacaBus() const { return placaBus; }
-
-int Ticket::getCantidadPasajeros() const { return cantidadPasajeros; }
-
-string Ticket::toString() {
-    return "Ticket #" + to_string(numeroTicket) + 
-           ", Cédula: " + cedulaPasajero +
-           ", Ruta: " + ruta + 
-           ", Bus: " + placaBus +
-           ", Pasajeros: " + to_string(cantidadPasajeros);
+void Ticket::imprimir() {
+    cout << "Ticket de Viaje" << endl;
+    cout << "Codigo: " << codigo << endl;
+    cout << "Pasajero: " << pasajero << endl;
+    cout << "Bus: "<<bus->getPlaca() << endl;
+    cout <<"Ruta: "<< viaje->getRutaAsignada()->getNombreRuta() << endl;
 }
-
-void Ticket::mostrarInfo() {
-    cout << toString() << endl;
+string Ticket::obtenerInfo() {
+    return Reserva::obtenerInfo() + "\n" +
+           "Pasajero: " + pasajero + "\n" +
+           "Asiento: " + to_string(asiento) + "\n";
 }
