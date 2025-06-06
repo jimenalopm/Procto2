@@ -23,10 +23,11 @@ public:
     
     // Métodos
     bool agregarPasajeros(int cantidad);
-    string toString() const override;
+    string toString()  override;
+     virtual string getTipo() const = 0;
     
     // Método para mostrar información (usado en Vector::mostrarTodos)
-    void mostrarInfo() const;
+    void mostrarInfo() ;
 
 
 }; 

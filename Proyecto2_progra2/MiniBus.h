@@ -8,7 +8,7 @@ class Minibus : public Bus {
 public:
     Minibus(const string& placa, int capacidadMaxima);
      string toString() override;
-    string getTipo() const override { return "Minibus"; }
+    string getTipo() const  override { return "Minibus"; }
 };
 
 #endif // MINIBUS_H
