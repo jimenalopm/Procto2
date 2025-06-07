@@ -11,10 +11,9 @@ class Interface
 {
 public:
 //Menus de la interface   
-int menuPrincipal();
-int menuconfiguracion();
-int menuReportes();
-
+static int menuPrincipal();
+static int menuconfiguracion();
+static int menuReportes();
 
 };
 
