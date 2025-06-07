@@ -10,7 +10,7 @@
 class Viaje:public Itransport{
     public:
     Viaje(Ruta* ruta, string& fecha, string& horaDeSalida);
-   
+    Viaje();
     ~Viaje();
     bool eliminarBus(const string& placaBus);
     void asignarBus(Bus* bus);

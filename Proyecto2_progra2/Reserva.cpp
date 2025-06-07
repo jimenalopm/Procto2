@@ -2,7 +2,7 @@
 
 
 Reserva::Reserva(Viaje* viaje, Bus* bus, string pasajero, string cedula, int asiento) 
-    : viaje(viaje), bus(), pasajero(pasajero), cedula(cedula), asiento(asiento) {
+    : Viaje(),viaje(viaje), bus(bus), pasajero(pasajero), cedula(cedula), asiento(asiento) {
     codigo = generarCodigo();
     
     
