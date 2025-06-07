@@ -24,21 +24,7 @@ void Ruta::setDestinos( Vector<Ruta*> destinos) {
 string Ruta::getNombreRuta() const {
     return nombreRuta;
 }
-/*void Ruta::asignarBus(Bus* bus){
-    buses.agregar(bus);
-}*/
-/*bool Ruta::reservaEspacio(int cantidadPasajeros, string& placaBusAsignado) {
-    for (int i = 0; i < buses.getTamanno(); i++) {
-        Bus& bus = buses.obtener(i);
-        // Verificar si el bus tiene suficiente capacidad disponible
-        if (bus.getCapacidadDisponible() >= cantidadPasajeros) {
-            bus.agregarPasajeros(cantidadPasajeros);
-            placaBusAsignado = bus.getPlaca();
-            return true;
-        }
-    }
-    return false; // No se encontró un bus con espacio suficiente
-}*/
+
 string Ruta::toString() {
     return "Ruta: " + nombreRuta + ", Destinos: " + std::to_string(destinos.getTamanno());
 }

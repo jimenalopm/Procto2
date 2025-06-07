@@ -2,8 +2,9 @@
 
 
 Reserva::Reserva(Viaje* viaje, Bus* bus, string pasajero, string cedula, int asiento) 
-    : viaje(viaje), bus(bus), pasajero(pasajero), cedula(cedula), asiento(asiento) {
+    : viaje(viaje), bus(), pasajero(pasajero), cedula(cedula), asiento(asiento) {
     codigo = generarCodigo();
+    
     
 
 }
@@ -22,3 +23,24 @@ string Reserva::obtenerInfo() {
            "Viaje: " + viaje->toString() + "\n" +
            "Bus: " + bus->toString();
 }
+
+
+
+
+/*bool Reserva::reservaEspacio(int cantidadPasajeros, string& placaBusAsignado) {
+    if (cantidadPasajeros <= 0) {
+        return false;
+    }
+
+    Vector<Bus*>& buses = viaje->getBusesAsignados();
+    for (int i = 0; i < buses.getTamanno(); i++) {
+        Bus* bus = buses[i];
+        if (bus && bus->getCapacidadDisponible() >= cantidadPasajeros) {
+            bus->agregarPasajeros(cantidadPasajeros); // Actualiza la capacidad
+            placaBusAsignado = bus->getPlaca();
+            return true;
+        }
+    }
+    
+    return false; // No hay buses con capacidad
+}*/
