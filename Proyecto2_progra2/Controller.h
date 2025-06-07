@@ -9,14 +9,23 @@
 
 class Controller
 {
- 
+private:
+Vector<Bus> b; //Vector de buses
+Vector<Ruta> r; //Vector de buses
+Vector<string> t; //Vector de tickets
+
 
 public:
     Controller();
     ~Controller();
 
+//MENUS
 void menuPrincipal();
-void configuracioFlota();
+void menuConfiguracion();
+void menureportes();
+
+//metodo para mostrar la disponibbilidad de pasajeros por ruta
+void mostrarDisponibilidadViajeporRuta();
 
 
 };

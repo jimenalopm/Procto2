@@ -9,6 +9,8 @@
 
 class Interface
 {
+
+
 public:
 //Menus de la interface   
 static int menuPrincipal();

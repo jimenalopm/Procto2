@@ -13,7 +13,7 @@ class Ruta :public Itransport
 private:
 string nombreRuta;
 Vector<Bus*> buses;
-Vector<string> destinos;
+Vector<Ruta*> destinos;
 
 public:
     Ruta();
@@ -23,7 +23,8 @@ public:
      //
      Vector<Bus*> getBuses();
      void setBuses(const Vector<Bus*>buses);
-     Vector<string> getDestinos() const;
+     Vector<Ruta*> getDestinos();
+     void setDestinos(Vector<Ruta*> destinos);
 
 
     string getNombreRuta() const;

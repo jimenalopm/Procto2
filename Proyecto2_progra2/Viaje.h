@@ -14,6 +14,7 @@ class Viaje:public Itransport{
     ~Viaje();
     bool eliminarBus(const string& placaBus);
     void asignarBus(Bus* bus);
+    void mostrarDisponibilidad();
     //setters y getters
     Ruta* getRutaAsignada();
     Vector<Bus*>& getBusesAsignados();

@@ -2,6 +2,9 @@
 //Jimena Lopez
 //Angelin Lopez
 //Nataly Arce
-
-
-#include<iostream>
+#include "Controller.h"
+int main() {
+    Controller controller;
+    controller.menuPrincipal();
+    return 0;
+}

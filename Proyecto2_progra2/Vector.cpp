@@ -63,7 +63,7 @@ Vector<T>::~Vector()
 
 template<typename T>
 void Vector<T>::agregar(T * dato) {
-// M�todo para agregar un bus al final
+// Motodo para agregar un bus al final
 	// Si no hay espacio suficiente, redimensionar
 	if (tamanno >= capacidad) {
 		int nuevaCapacidad = (capacidad == 0) ? 1 : capacidad * 2;
@@ -79,9 +79,9 @@ void Vector<T>::agregar(T * dato) {
 template<typename T>
 void Vector<T>::insertar(int posicion, T * dato)
 {
-	// Verificar que la posici�n sea v�lida
+	// Verificar que la posicion sea valida
 	if (posicion > tamanno) {
-		throw std::out_of_range("Posici�n fuera de rango");
+		throw std::out_of_range("Posicion fuera de rango");
 	}
 
 	// Si no hay espacio suficiente, redimensionar
@@ -106,7 +106,7 @@ template<typename T>
 void Vector<T>::eliminar(int posicion) {
 	// Verificar que la posici�n sea v�lida
 	if (posicion >= tamanno) {
-		throw std::out_of_range("Posici�n fuera de rango");
+		throw std::out_of_range("Posicion fuera de rango");
 	}
 
 	// Desplazar buses para eliminar
@@ -123,7 +123,7 @@ void Vector<T>::eliminar(int posicion) {
 template<typename T>
 T Vector<T>::obtener(int posicion) {
 	if (posicion >= tamanno) {
-		throw std::out_of_range("Posici�n fuera de rango");
+		throw std::out_of_range("Posicion fuera de rango");
 	}
 	return elementos[posicion];
 }
@@ -136,28 +136,28 @@ int Vector<T>::getTamanno() {
 }
 
 template<typename T>
-// M�todo para obtener la capacidad actual
+// Metodo para obtener la capacidad actual
 int Vector<T>::getCapacidad() {
 	return this->capacidad;
 }
 
 
 template<typename T>
-// M�todo para verificar si el vector est� vac�o
+// Motodo para verificar si el vector esta vacio
 bool Vector<T>::estaVacio() {
 	return tamanno == 0;
 }
 
 
 template<typename T>
-// M�todo para vaciar el vector
+// Motodo para vaciar el vector
 void Vector<T>::vaciar() {
 	tamanno = 0;
 }
 
 
 template<typename T>
-// M�todo para mostrar todos los Buses
+// Motodo para mostrar todos los Buses
 void Vector<T>::mostrarTodos() {
 	std::cout << "=== Lista de Registros (Total: " << tamanno << ") ===" << std::endl;
 	if (tamanno == 0) {
@@ -178,5 +178,6 @@ void Vector<T>::mostrarTodos() {
 template class Vector<Bus>;
 template class Vector<Ruta>;
 template class Vector<Ticket>;
+template class Vector<string>;
 
 

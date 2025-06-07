@@ -23,7 +23,8 @@ bool Bus::agregarPasajeros(int cantidad) {
 string Bus::toString() {
     return "Bus Placa: " + placa + 
            ", Capacidad: " + std::to_string(capacidadMaxima) +
-           ", Pasajeros: " + std::to_string(pasajerosActuales);
+           ", Pasajeros: " + std::to_string(pasajerosActuales) +
+           ", Capacidad Disponible: " + std::to_string(getCapacidadDisponible());
 }
 
 void Bus::mostrarInfo() {

@@ -27,6 +27,15 @@ bool Viaje::eliminarBus(const string& placaBus) {
     }
     return false; // No se encontró el bus con la placa especificada
 }
+void Viaje::mostrarDisponibilidad() {
+    
+        cout << "Buses asignados para el viaje: " << rutaAsignada->getNombreRuta() << std::endl;
+        for (int i = 0; i < busesAsignados.getTamanno(); i++) {
+            Bus* bus = busesAsignados.obtener(i);
+            cout << bus->toString()<< std::endl;
+        }
+    
+}
 Ruta* Viaje::getRutaAsignada() {
     return rutaAsignada;
 }
