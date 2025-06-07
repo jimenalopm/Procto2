@@ -12,12 +12,14 @@ private:
     int tamanno;
     int capacidad;
 
-     // metodo privado para redimensionar
-    void redimensionar(int Capacidad);
+     
 
 public:
     Vector();
+    
 
+    // metodo privado para redimensionar
+    void redimensionar(int nuevaCapacidad);
     // con capacidad inicial
     Vector(int capacidadInicial);
 

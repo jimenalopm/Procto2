@@ -1,4 +1,5 @@
-
+#ifndef TICKET_H
+#define TICKET_H
 #include "Reserva.h"
 
 class Ticket:public Reserva
@@ -20,3 +21,4 @@ class Ticket:public Reserva
     
     
 };
+#endif

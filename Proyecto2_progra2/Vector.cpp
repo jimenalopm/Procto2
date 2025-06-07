@@ -3,8 +3,9 @@
 #include "Ruta.h"
 #include "Ticket.h"
 
+
 template<typename T>
-void Vector<T>::redimensionar(int nuevacapacidad){
+void Vector<T>::redimensionar(int nuevaCapacidad) {
     T* nuevoArreglo = new T[nuevaCapacidad];
     int elementosACopiar = (nuevaCapacidad < tamanno) ? nuevaCapacidad : tamanno;
 
@@ -14,12 +15,13 @@ void Vector<T>::redimensionar(int nuevacapacidad){
 
     delete[] elementos;
     elementos = nuevoArreglo;
-    this->capacidad = nuevaCapacidad;
+    capacidad = nuevaCapacidad;
 
     if (tamanno > capacidad) {
         tamanno = capacidad;
     }
 }
+
 
 template<typename T>
 Vector<T>::Vector()
@@ -29,25 +31,16 @@ Vector<T>::Vector()
 	this->capacidad = 0;
 }
 
-
+template<typename T>
+Vector<T>::Vector(int capacidadInicial) : 
+    elementos(new T[capacidadInicial]), tamanno(0), capacidad(capacidadInicial) {}
 
 template<typename T>
-Vector<T>::Vector(int capacidadInicial)
-{
-	this->elementos = new T[capacidadInicial];
-	this->tamanno = 0;
-	this->capacidad = capacidadInicial;
-}
-
-
-template<typename T>
-Vector<T>::Vector(const Vector& otro) {//recibe un vector y crea uno nuevo igual
-	this->tamanno = otro.tamanno;
-	this->capacidad = otro.capacidad;
-	elementos = new T*[capacidad];
-	for (int i = 0; i < tamanno; i++) {
-		elementos[i] = otro.elementos[i];
-	}
+Vector<T>::Vector(const Vector& otro) : 
+    elementos(new T[otro.capacidad]), tamanno(otro.tamanno), capacidad(otro.capacidad) {
+    for (int i = 0; i < tamanno; i++) {
+        elementos[i] = otro.elementos[i];
+    }
 }
 
 
@@ -58,6 +51,7 @@ Vector<T>::~Vector()
 	
 	delete[] elementos;
 }
+
 
 
 

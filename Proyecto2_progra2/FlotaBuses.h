@@ -16,10 +16,10 @@ public:
     void agregarTicket(Ticket* t){
         tickets.agregar(&t);
     };
-    void generarReporteTickets(){
+   void generarReporteTickets(){
         cout<<"Reporte de Tickets Generados: "<<endl;
         for(int i=0; i<tickets.getTamanno(); i++){
-            tickets.obtener(i)->imprimir();
+            tickets.obtener(i)->toString();
         }
     }
     

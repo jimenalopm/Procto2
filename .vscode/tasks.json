@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build Proyecto2_progra2",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++14",
+                "${workspaceFolder}\\Proyecto2_progra2\\*.cpp",
+                "-o",
+                "${workspaceFolder}\\Proyecto2_progra2\\main.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compila todos los archivos .cpp del proyecto"
+        }
+    ]
+}

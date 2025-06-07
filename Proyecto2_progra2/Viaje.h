@@ -1,8 +1,9 @@
+#ifndef VIAJE_H
+#define VIAJE_H
 #include <iostream>
 #include "Itransport.h"
 #include "Ruta.h"
 #include "Vector.h"
-
 
 
 // 
@@ -30,3 +31,4 @@ class Viaje:public Itransport{
     string fecha;
     string horaDeSalida;
 };
+#endif
