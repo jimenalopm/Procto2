@@ -27,7 +27,7 @@ string Reserva::obtenerInfo() {
 
 
 
-/*bool Reserva::reservaEspacio(int cantidadPasajeros, string& placaBusAsignado) {
+bool Reserva::reservaEspacio(int cantidadPasajeros, string& placaBusAsignado) {
     if (cantidadPasajeros <= 0) {
         return false;
     }
@@ -43,4 +43,4 @@ string Reserva::obtenerInfo() {
     }
     
     return false; // No hay buses con capacidad
-}*/
+}

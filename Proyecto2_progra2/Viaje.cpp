@@ -15,7 +15,7 @@ Viaje::~Viaje(){
 }
 
 void Viaje::asignarBus(Bus* bus){
-   busesAsignados.agregar(&bus);
+   busesAsignados.agregar(bus);
 }
 bool Viaje::eliminarBus(const string& placaBus) {
     for (int i = 0; i < busesAsignados.getTamanno(); i++) {

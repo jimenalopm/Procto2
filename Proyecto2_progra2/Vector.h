@@ -12,39 +12,28 @@ private:
     int tamanno;
     int capacidad;
 
-     
+void redimensionar(int nuevaCapacidad);
 
 public:
-    Vector();
-    
-
-    // metodo privado para redimensionar
-    void redimensionar(int nuevaCapacidad);
-    // con capacidad inicial
+   Vector();
     Vector(int capacidadInicial);
-
-    //copia 
     Vector(const Vector& otro);
-
-    //destrcutor 
     ~Vector();
-    
-    //Metodo para agregar  un objecto al final
-    void agregar(T* dato);
 
-    // agregar un bus en una posicion especifica 
-    void insertar(int posicion, T* dato);
-
+    void agregar(T dato);
+    void insertar(int posicion, T dato);
     void eliminar(int posicion);
+    T obtener(int posicion);
 
-    T obtener(int posicion) ;
     int getTamanno() ;
     int getCapacidad() ;
     bool estaVacio() ;
-    void vaciar() ;
+    void vaciar();
     void mostrarTodos();
 
-
+    //  Nuevos operadores
+    T operator[](int index) const;
+    T& operator[](int index);
 };
 
 #endif
