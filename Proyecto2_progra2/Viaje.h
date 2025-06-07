@@ -4,14 +4,13 @@
 #include "Itransport.h"
 #include "Ruta.h"
 #include "Vector.h"
-
+#include<string>
 
 // 
 class Viaje:public Itransport{
     public:
-    Viaje(Ruta* ruta, string& fecha, string& horaDeSalida)
-        : rutaAsignada(ruta), fecha(fecha), horaDeSalida(horaDeSalida) {};
-    Viaje();
+    Viaje(Ruta* ruta, string& fecha, string& horaDeSalida);
+   
     ~Viaje();
     bool eliminarBus(const string& placaBus);
     void asignarBus(Bus* bus);

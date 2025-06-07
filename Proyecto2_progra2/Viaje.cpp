@@ -1,13 +1,10 @@
 #include "Viaje.h"
 
-
 Viaje::Viaje(Ruta* ruta, string& fecha, string& horaDeSalida)
     : rutaAsignada(ruta), fecha(fecha), horaDeSalida(horaDeSalida) {
     // Constructor implementation
 }
-Viaje::Viaje(){
 
-}
 Viaje::~Viaje(){
     for (int i = 0; i < busesAsignados.getTamanno(); i++) {
         delete busesAsignados.obtener(i);

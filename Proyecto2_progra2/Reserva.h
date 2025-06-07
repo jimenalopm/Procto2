@@ -1,3 +1,5 @@
+#ifndef RESERVA_H  // Guardia de inclusión
+#define RESERVA_H
 #include <iostream>
 #include "Viaje.h"
 #include "Bus.h"
@@ -6,7 +8,7 @@
 
 class Reserva:public Viaje{
     public:
-    Reserva(Viaje* viaje, Bus* bus, string pasajero, string cedula, int asiento = -1);
+    Reserva(Viaje* viaje, Bus* bus, string pasajero, string cedula, int asiento);
     virtual ~Reserva();
 
     //metodos
@@ -29,4 +31,5 @@ class Reserva:public Viaje{
     string pasajero;
     string cedula;
     int asientosOcupados;
-};
+};  
+ #endif // RESERVA_H
